@@ -1,0 +1,1 @@
+# TripGenius API Planning & Documentation
