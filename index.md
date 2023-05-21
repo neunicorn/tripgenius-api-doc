@@ -1,14 +1,18 @@
 # TripGenius API Planning & Documentation
 URL: http://trigpen-api.com/{version}/{Group}/{endpoint}
 
-==   
-GROUP: Auth
+-----------
+## GROUP: Auth
 
-## [1] - Register
+### [1] - Register
 - URL: http://tripgen-api.com/v1/auth/register
 - Endpoint: `register`  
 - Method: POST
 - Request Body:
+    - `name` : string, `NOT NULL`,
+    - `username`: string, `NOT NULL`, Must Unique,
+    - `email` : string, `Unique`
+    - `hp-num`: string, Tidak harus di isi
   ```
   {
     name: "jhon doe",
@@ -18,11 +22,7 @@ GROUP: Auth
     hp-num : "08xxxxxxx",
     address: "xxxxxx"
   }
-  ```
-  - `name` : string, `NOT NULL`,
-  - `username`: string, `NOT NULL`, Must Unique,
-  - `email` : string, `Unique`
-  - `hp-num`: string, Tidak harus di isi
+  ```  
 - Response:
   ```
   message: "REGISTER_SUCCESS",
