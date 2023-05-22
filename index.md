@@ -131,7 +131,7 @@ updatedAt
     - `/user/:id`
 - Method: 
     - `PUT` or `PATCH`
-- Request Body:
+- Request Body:  
     - `old-password`, string
     - `new-password`, string  
 ```
@@ -140,7 +140,7 @@ old-password: "example",
 new-password: "exmaple123"
 }
 ```  
--Response: 
+- Response: 
 ```
 {
 status: true,
