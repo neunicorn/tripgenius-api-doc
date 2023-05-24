@@ -68,7 +68,7 @@ refreshToken
     - `400` : INVALID_INPUT, EMAIL_REQUIRED, PASS_REQUIRED
     - `401` : USER_NOT_FOUND, EMAIL_NOT_REGISTERED, PASSWORD_INVALID  
 
-### [3] - resreshToken
+### [3] - resreshToken [**DO NOT USE refreshToken**]
 - URL:
     - http://wwww.rooturl-api.com/v1/auth/refreshToken
 - Endpoint:
@@ -102,11 +102,14 @@ newRefreshToken
     - `/user/:id`
 - Method: 
     - `PUT` or `PATCH`
+- Headers:  
+    - `Authorization` : Bearer < Access-Token >
 - Request Body:
     - `Name`, string and NULL able
     - `Username`, string and NULL able
     - `hp-num`, string and NULL able
     - `address`, string and NULL able  
+
 ```
 {
 Name: "example",
@@ -131,6 +134,8 @@ updatedAt
     - `/user/:id`
 - Method: 
     - `PUT` or `PATCH`
+- Headers:  
+    - `Authorization` : Bearer < Access-Token >  
 - Request Body:  
     - `old-password`, string
     - `new-password`, string  
